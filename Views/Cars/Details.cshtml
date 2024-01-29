@@ -1,59 +1,59 @@
-﻿@model IvoCars.Models.Domain.Car
+﻿@model IvoCars.Core.Domain.Car
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Üksikasjad";
 }
 
-<h1>Details</h1>
+<h1>Üksikasjad</h1>
 
 <div>
-    <h4>Car</h4>
+    <h4>Auto</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CarBrand)
+            Auto mark
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.CarBrand)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CarModel)
+            Auto mudel
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.CarModel)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CarYear)
+            Väljalaske aasta
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.CarYear)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CarGearbox)
+            Käigukast
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.CarGearbox)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CarColor)
+            Auto värv
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.CarColor)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CarMileage)
+            Läbisõit
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.CarMileage)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CreatedAt)
+            Loodud
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.CreatedAt)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ModifiedAt)
+            Uuendatud
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.ModifiedAt)
@@ -61,6 +61,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Muuda</a> |
+    <a asp-action="Index">Tagasi</a>
 </div>

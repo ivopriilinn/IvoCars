@@ -6,7 +6,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using IvoCars.Data;
-using IvoCars.Models.Domain;
+using IvoCars.Core.Domain;
+using System.Diagnostics;
+using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace IvoCars.Controllers
 {
@@ -54,10 +56,12 @@ namespace IvoCars.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,CarBrand,CarModel,CarYear,CarGearbox,CarColor,CarMileage,CreatedAt,ModifiedAt")] Car car)
+        public async Task<IActionResult> Create([Bind("CarBrand,CarModel,CarYear,CarGearbox,CarColor,CarMileage")] Car car)
         {
             if (ModelState.IsValid)
             {
+                car.CreatedAt = DateTime.Now;
+                car.ModifiedAt = DateTime.Now;
                 _context.Add(car);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -86,8 +90,12 @@ namespace IvoCars.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(Guid? id, [Bind("Id,CarBrand,CarModel,CarYear,CarGearbox,CarColor,CarMileage,CreatedAt,ModifiedAt")] Car car)
+        public async Task<IActionResult> Edit(Guid? id, [Bind("Id,CarBrand,CarModel,CarYear,CarGearbox,CarColor,CarMileage,CreatedAt")] Car car)
         {
+            Debug.WriteLine("car.Id=" + car.Id);
+            Debug.WriteLine("car.CarYear=" + car.CarYear);
+            Debug.WriteLine("car.CreatedAt=" + car.CreatedAt);
+            
             if (id != car.Id)
             {
                 return NotFound();
@@ -97,6 +105,7 @@ namespace IvoCars.Controllers
             {
                 try
                 {
+                   car.ModifiedAt = DateTime.Now;
                     _context.Update(car);
                     await _context.SaveChangesAsync();
                 }
