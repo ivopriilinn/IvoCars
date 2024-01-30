@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IvoCars.Core", "..\IvoCars.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IvoCars.Data", "..\IvoCars.Data\IvoCars.Data.csproj", "{80AEF9A3-33C2-49E2-B640-868444237FD7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IvoCars.CarTest", "..\IvoCar.CarTest\IvoCars.CarTest.csproj", "{4A916053-4A03-46F9-AF32-C97322A63599}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{80AEF9A3-33C2-49E2-B640-868444237FD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80AEF9A3-33C2-49E2-B640-868444237FD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80AEF9A3-33C2-49E2-B640-868444237FD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A916053-4A03-46F9-AF32-C97322A63599}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A916053-4A03-46F9-AF32-C97322A63599}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A916053-4A03-46F9-AF32-C97322A63599}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A916053-4A03-46F9-AF32-C97322A63599}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
