@@ -24,7 +24,8 @@ namespace IvoCars.Controllers
         // GET: Cars
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Cars.ToListAsync());
+            var result = await _context.Cars.ToListAsync();
+            return View(result);
         }
 
         // GET: Cars/Details/5
