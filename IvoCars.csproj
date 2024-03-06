@@ -15,12 +15,14 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.NET.Build.Containers" Version="8.0.101" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\IvoCars.Core\IvoCars.Core.csproj" />
     <ProjectReference Include="..\IvoCars.Data\IvoCars.Data.csproj" />
+    <ProjectReference Include="..\IvoCarsApplicationServices\IvoCars.ApplicationServices.csproj" />
   </ItemGroup>
 
 </Project>
